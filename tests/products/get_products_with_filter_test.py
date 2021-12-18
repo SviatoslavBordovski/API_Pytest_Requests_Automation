@@ -15,13 +15,12 @@ class TestListProductsWithFilter(object):
         after_created_date_not_isoformated = datetime.now().replace(microsecond=0) - timedelta(days=x_days_from_today)
         after_created_date = after_created_date_not_isoformated.isoformat()
 
-        # making api call
+        # set needed 'after' value
         request_body = dict()
         request_body['after'] = after_created_date
 
+        # get the list of products
         rs_api = ProductsHelper().call_list_products(request_body)
-        pdb.set_trace()
-
         assert rs_api, f"Empty response for 'list products with filter"
 
         # get data from db
