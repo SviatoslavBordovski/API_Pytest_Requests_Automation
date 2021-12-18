@@ -18,7 +18,7 @@ class TestListProductsWithFilter(object):
         # tmp_date = datetime.now() - timedelta(days=x_days_from_today)
         # after_created_date = tmp_date.strftime('%Y-%M-%dT%H:%m:%S')
 
-        # making the api call
+        # making api call
         request_body = dict()
         request_body['after'] = after_created_date
 
