@@ -15,9 +15,6 @@ class TestListProductsWithFilter(object):
         after_created_date_not_isoformated = datetime.now().replace(microsecond=0) - timedelta(days=x_days_from_today)
         after_created_date = after_created_date_not_isoformated.isoformat()
 
-        # tmp_date = datetime.now() - timedelta(days=x_days_from_today)
-        # after_created_date = tmp_date.strftime('%Y-%M-%dT%H:%m:%S')
-
         # making api call
         request_body = dict()
         request_body['after'] = after_created_date
