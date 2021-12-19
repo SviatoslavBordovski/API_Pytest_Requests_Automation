@@ -14,7 +14,7 @@ def test_create_1_simple_product():
     request_body['regular_price'] = "10.99"
     request_body['description'] = generate_random_string(30, suffix="_quite_good_described_field")
 
-    # make the call
+    # make the api call
     product_rs = ProductsHelper().call_create_product(request_body)
 
     # verify the response is not empty and actual result matches expected
