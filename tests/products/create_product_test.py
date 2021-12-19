@@ -7,7 +7,7 @@ import pytest
 @pytest.mark.tc6
 def test_create_1_simple_product():
 
-    # generate some data
+    # generate dictionary data
     request_body = dict()
     request_body['name'] = generate_random_string(10, prefix="automation_test_name_")
     request_body['type'] = "simple"
