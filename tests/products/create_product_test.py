@@ -17,7 +17,7 @@ def test_create_1_simple_product():
     # make the call
     product_rs = ProductsHelper().call_create_product(request_body)
 
-    # verify the response is not empty and actual result mathces expected
+    # verify the response is not empty and actual result matches expected
     assert product_rs, f"Create product api response is empty. Payload: {request_body}"
     assert product_rs['name'] == request_body['name'], f"Create product api call response has" \
         f"unexpected name. Expected: {request_body['name']}, Actual: {product_rs['name']}"
