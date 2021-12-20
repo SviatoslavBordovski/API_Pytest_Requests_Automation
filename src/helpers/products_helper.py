@@ -22,6 +22,7 @@ class ProductsHelper(object):
             if not body:
                 body = {}
 
+            # set 'per_page' key to value '100' in body if there is no set 'per_page' at all
             if not 'per_page' in body.keys():
                 body['per_page'] = 100
 
