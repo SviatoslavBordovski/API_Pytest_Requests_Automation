@@ -19,7 +19,7 @@ def generate_random_email_and_password(domain=None, email_prefix=None):
     # Set conditions for password generation
     password_length = 15
     password_string = ''.join(random.choices(string.ascii_letters, k=password_length))
-    password = password_string + '2021' + '_for_' + email_prefix + '_' + random_string + '@' + domain
+    password = password_string + '2022' + '_for_' + email_prefix + '_' + random_string + '@' + domain
 
     # Dictionary for credentials
     random_info = {'email': email, 'password': password}
