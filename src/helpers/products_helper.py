@@ -27,13 +27,13 @@ class ProductsHelper(object):
 
             # add the current page number to the call
             body['page'] = i
-            rs_api = self.requests_utility.get('products', body_params=body)
+            actual_products = self.requests_utility.get('products', body_params=body)
 
-            # if there is not response then stop the loop b/c there are no more products
-            if not rs_api:
+            # if there is no response then stop the loop because there are no more products
+            if not actual_products:
                 break
             else:
-                all_products.extend(rs_api)
+                all_products.extend(actual_products)
         else:
             raise Exception(f"Unable to find all products after {max_pages} pages.")
 
