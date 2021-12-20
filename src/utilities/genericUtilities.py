@@ -7,7 +7,7 @@ def generate_random_email_and_password(domain=None, email_prefix=None):
 
     # Set domain and email prefix for email generation
     if not domain:
-        domain = 'temy.co'
+        domain = 'bordovski.pp.ua'
     if not email_prefix:
         email_prefix = 'testuser'
 
