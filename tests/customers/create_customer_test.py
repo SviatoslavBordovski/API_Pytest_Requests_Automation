@@ -8,8 +8,6 @@ from src.utilities.requestsUtility import RequestsUtility
 @pytest.mark.customers
 @pytest.mark.tc1
 def test_create_customer_only_email_password():
-
-    # import pdb; pdb.set_trace()
     logger.info("Test Case #1: create new customer with email only.")
 
     rand_info = generate_random_email_and_password()
