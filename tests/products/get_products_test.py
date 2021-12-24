@@ -26,7 +26,7 @@ def test_get_product_by_id():
     api_name = rs_api['name']
     api_post_status = rs_api['status']
 
-    # verify the response for name and status of product
+    # verify the response for name and product status
     assert product_db_name == api_name, f"Get product by id returned wrong product. Product id: {rand_product_id}, " \
                                 f"Db name: {product_db_name}, Api name: {api_name}"
 
