@@ -18,7 +18,7 @@ def test_create_customer_only_email_password():
     cust_obj = CustomerHelper()
     cust_api_info = cust_obj.create_customer(email=generated_email, password=generated_password)
 
-    # Verify email and first name in the response
+    # Verify email and first name in the response match expected result
     assert cust_api_info['email'] == generated_email, f"Create customer api return wrong email. Email: {generated_email}"
     assert cust_api_info['first_name'] == '', f"Create customer api returned value for first_name" \
                                               f"but it should be empty. "
