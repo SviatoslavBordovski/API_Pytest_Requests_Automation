@@ -40,7 +40,7 @@ def test_create_customer_fail_for_existing_email():
 
     logger.info("Test Case #2: get existing customer from the db and reject creation new customer with the same email")
 
-    # Get user's existing email from db
+    # Get user's existing email from the db
     cust_dao = CustomersDAO()
     existing_customer = cust_dao.get_random_customer_from_db()
     existing_email = existing_customer[0]['user_email']
