@@ -40,12 +40,12 @@ def test_create_customer_fail_for_existing_email():
 
     logger.info("Test Case #2: get existing customer from the db and reject creation new customer with the same email")
 
-    # get user's existing email from db
+    # Get user's existing email from db
     cust_dao = CustomersDAO()
     existing_customer = cust_dao.get_random_customer_from_db()
     existing_email = existing_customer[0]['user_email']
 
-    # call the api
+    # Call the 'post' request
     req_helper = RequestsUtility()
     request_body = {"email": existing_email, "password": "Password1"}
     cust_api_info = req_helper.post(endpoint='customers', body_params=request_body, expected_status_code=400)
