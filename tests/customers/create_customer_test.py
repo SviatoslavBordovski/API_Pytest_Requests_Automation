@@ -14,7 +14,7 @@ def test_create_customer_only_email_password():
     generated_email = rand_info['email']
     generated_password = rand_info['password']
 
-    # make the 'post' request/call
+    # Make the 'post' request/call
     cust_obj = CustomerHelper()
     cust_api_info = cust_obj.create_customer(email=generated_email, password=generated_password)
 
@@ -25,7 +25,7 @@ def test_create_customer_only_email_password():
 
     logger.info("Email and first name are verified, so new customer has been created")
 
-    # verify customer is created in database
+    # Verify customer is created in database
     cust_dao = CustomersDAO()
     cust_info = cust_dao.get_customer_by_email(generated_email)
 
