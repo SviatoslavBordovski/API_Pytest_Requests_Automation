@@ -25,7 +25,7 @@ def test_create_customer_only_email_password():
 
     logger.info("Email and first name are verified, so new customer has been created")
 
-    # Verify customer is created in database
+    # Verify new customer has been created in database
     cust_dao = CustomersDAO()
     cust_info = cust_dao.get_customer_by_email(generated_email)
 
