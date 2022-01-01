@@ -46,7 +46,7 @@ class RequestsUtility(object):
         self.rs_json = rs_api.json()
         self.assert_status_code()
 
-        logger.debug(f"GET API response: {self.rs_json}")
+        logger.debug(f"GET API response is: {self.rs_json}")
 
         return self.rs_json
 
