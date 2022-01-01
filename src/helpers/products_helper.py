@@ -26,7 +26,7 @@ class ProductsHelper(object):
             if not 'per_page' in body.keys():
                 body['per_page'] = 100
 
-            # add the current page number to the api call
+            # add a current page number to the api call
             body['page'] = i
             actual_products = self.requests_utility.get('products', body_params=body)
 
