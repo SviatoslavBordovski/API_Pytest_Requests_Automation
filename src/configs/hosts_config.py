@@ -4,7 +4,7 @@ API_HOSTS = {
     "prod": ""
 }
 WOO_API_HOSTS = {
-    "test": "your ip",
+    "test": "http://localhost:10004/",
     "dev": "",
     "prod": ""
 }
