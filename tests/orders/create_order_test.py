@@ -17,7 +17,6 @@ def my_orders_smoke_setup():
     return info
 
 
-@pytest.mark.smoke
 @pytest.mark.orders
 @pytest.mark.tc8
 def test_create_paid_order_guest_user(my_orders_smoke_setup):
