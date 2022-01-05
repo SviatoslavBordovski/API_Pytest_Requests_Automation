@@ -1,6 +1,7 @@
 from src.dao.products_dao import ProductsDAO
 from src.helpers.orders_helper import OrdersHelper
 from src.helpers.customers_helper import CustomerHelper
+import logging as logger
 import pytest
 
 @pytest.fixture(scope='module')
@@ -19,7 +20,9 @@ def my_orders_smoke_setup():
 
 @pytest.mark.orders
 @pytest.mark.tc8
-def test_create_paid_order_guest_user(my_orders_smoke_setup):
+def test_create_order_guest_user(my_orders_smoke_setup):
+
+    logger.info("Test Case #8: Create a new paid order by guest user.")
 
     order_helper = my_orders_smoke_setup['order_helper']
 
@@ -34,3 +37,7 @@ def test_create_paid_order_guest_user(my_orders_smoke_setup):
                 }
               ]}
     order_json = order_helper.create_order(additional_args=info)
+
+    # verify response
+    expected_products = [{'product_id': product_id}]
+    order_helper.verify_order_is_created(order_json, customer_id, expected_products)
