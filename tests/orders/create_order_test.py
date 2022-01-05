@@ -5,7 +5,7 @@ import logging as logger
 import pytest
 
 @pytest.fixture(scope='module')
-def my_orders_smoke_setup():
+def orders_setup():
     product_dao = ProductsDAO()
     rand_product = product_dao.get_random_product_from_db(1)
     product_id = rand_product[0]['ID']
@@ -24,7 +24,7 @@ def test_create_order_guest_user(my_orders_smoke_setup):
 
     logger.info("Test Case #8: Create a new paid order by guest user.")
 
-    order_helper = my_orders_smoke_setup['order_helper']
+    order_helper = orders_setup['order_helper']
 
     customer_id = 0
     product_id = my_orders_smoke_setup['product_id']
