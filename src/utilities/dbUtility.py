@@ -50,7 +50,7 @@ class DBUtility(object):
             cur = conn.cursor(pymysql.cursors.DictCursor)  # makes each row of table as a dictionary
             cur.execute(sql_request)  # execution of actual request
             rs_dict = cur.fetchall()  # fetched all results that were requested/executed
-            cur.close()  # closed connection
+            cur.close()  # closing connection
         except Exception as e:
             raise Exception(f"Failed running sql: {sql_request} \n  Error: {str(e)}")
         finally:
