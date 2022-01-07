@@ -47,7 +47,7 @@ class DBUtility(object):
 
         try:
             logger.debug(f"Executing sql request: {sql_request}")
-            cur = conn.cursor(pymysql.cursors.DictCursor)  # makes each row of table as dictionary
+            cur = conn.cursor(pymysql.cursors.DictCursor)  # makes each row of table as a dictionary
             cur.execute(sql_request)  # execution of actual request
             rs_dict = cur.fetchall()  # fetched all results that were requested/executed
             cur.close()  # closed connection
