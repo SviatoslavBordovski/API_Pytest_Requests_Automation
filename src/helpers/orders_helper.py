@@ -20,7 +20,7 @@ class OrdersHelper(object):
         with open(body_template) as f:
             request_body = json.load(f)
 
-        # if user adds more info to payload, then update it
+        # if user adds more info to the request body, then update it
         if additional_args:
             assert isinstance(additional_args, dict), f"Parameter 'additional_args' must be a dictionary but found {type(additional_args)}"
             request_body.update(additional_args)
