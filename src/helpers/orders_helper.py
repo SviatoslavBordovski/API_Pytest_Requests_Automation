@@ -49,7 +49,6 @@ class OrdersHelper(object):
 
         # loop through db table to fetch one order item with 'order_item_type' key that equals 'line_item' value
         line_items = [i for i in line_info if i['order_item_type'] == 'line_item']
-        # import pdb; pdb.set_trace()
         assert len(line_items) == 1, f"Expected 1 line item but found {len(line_items)}. Order id: {order_id}"
 
         # get list of product ids in the response
