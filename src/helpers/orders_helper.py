@@ -13,7 +13,7 @@ class OrdersHelper(object):
 
     def create_order(self, additional_args=None):
 
-        # setting body for the api request
+        # setting body for api request
         body_template = os.path.join(self.cur_file_dir, '..', 'data', 'create_order_payload.json')
 
         # open that file and modify it from json to python
