@@ -24,7 +24,7 @@ def test_create_order_guest_user(my_orders_smoke_setup):
 
     logger.info("Test Case #8: Create a new paid order by guest user.")
 
-    # prepare data
+    # prepare test data
     order_helper = orders_setup['order_helper']
     customer_id = 0
     product_id = my_orders_smoke_setup['product_id']
