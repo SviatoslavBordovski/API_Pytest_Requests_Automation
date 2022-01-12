@@ -38,6 +38,6 @@ def test_create_order_guest_user(my_orders_smoke_setup):
               ]}
     order_json = order_helper.create_order(additional_args=info)
 
-    # verify response
+    # verify the response
     expected_products = [{'product_id': product_id}]
     order_helper.verify_order_is_created(order_json, customer_id, expected_products)
