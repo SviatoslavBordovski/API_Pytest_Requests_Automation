@@ -20,7 +20,7 @@ def test_get_product_by_id():
     product_db_name = rand_product[0]['post_title']
     product_status = rand_product[0]['post_status']
 
-    # make 'get' api request
+    # make 'get' api call
     product_helper = ProductsHelper()
     rs_api = product_helper.get_product_by_id(rand_product_id)
     api_name = rs_api['name']
