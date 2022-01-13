@@ -25,7 +25,6 @@ def test_create_1_simple_product():
     # verify the product exists in db
     product_id = product_rs['id']
     db_product = ProductsDAO().get_product_by_id(product_id)
-    #import pdb; pdb.set_trace()
 
     # verify api product name matches recorded db product name
     assert request_body['name'] == db_product[0]['post_title'], f"Create product, title in db does not match " \
