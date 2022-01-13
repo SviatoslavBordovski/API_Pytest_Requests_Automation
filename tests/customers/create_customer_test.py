@@ -14,7 +14,7 @@ def test_create_customer_only_email_password():
     generated_email = rand_info['email']
     generated_password = rand_info['password']
 
-    # Make the 'post' request/call
+    # Make a 'post' request/call
     cust_obj = CustomerHelper()
     cust_api_info = cust_obj.create_customer(email=generated_email, password=generated_password)
 
@@ -29,6 +29,7 @@ def test_create_customer_only_email_password():
     cust_dao = CustomersDAO()
     cust_info = cust_dao.get_customer_by_email(generated_email)
 
+    # verify the id in the api response matches id in the database
     id_in_api = cust_api_info['id']
     id_in_db = cust_info[0]['ID']
     assert id_in_api == id_in_db, f'Create customer response "id" not same as "ID" in database.' \
