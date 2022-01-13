@@ -22,7 +22,7 @@ def test_create_1_simple_product():
     assert product_rs['name'] == request_body['name'], f"Create product api call response has" \
         f"unexpected name. Expected: {request_body['name']}, Actual: {product_rs['name']}"
 
-    # verify the product exists in db
+    # verify a product exists in the db
     product_id = product_rs['id']
     db_product = ProductsDAO().get_product_by_id(product_id)
 
