@@ -13,7 +13,7 @@ class TestListProductsWithFilter(object):
         logger.info("Test Case #7: Getting all the products created after specific date.")
 
         # Create data (date in the past should be changed to .iso format)
-        x_days_from_today = 1500
+        x_days_from_today = 150
         after_created_date_not_isoformated = datetime.now().replace(microsecond=0) - timedelta(days=x_days_from_today)
         after_created_date = after_created_date_not_isoformated.isoformat()
 
