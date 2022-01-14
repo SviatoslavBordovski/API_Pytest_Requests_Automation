@@ -24,7 +24,7 @@ class TestListProductsWithFilter(object):
         rs_with_all_fetched_products = ProductsHelper().call_list_products(request_body)
         assert rs_with_all_fetched_products, f"Empty response for 'list products with filter"
 
-        # get data from db and verify actual response matches db records
+        # get data from the db and verify actual response matches db records
         db_products = ProductsDAO().get_products_created_after_given_date(after_created_date)
         assert len(rs_with_all_fetched_products) == len(db_products), f"List products with filter 'after' returned unexpected number of products." \
                                                 f"Expected: {len(db_products)}, Actual: {len(rs_with_all_fetched_products)}"
