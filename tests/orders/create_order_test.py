@@ -6,6 +6,7 @@ import pytest
 
 @pytest.fixture(scope='module')
 def orders_setup():
+    """This fuxture allows to use it for every function/test inside of module"""
     product_dao = ProductsDAO()
     rand_product = product_dao.get_random_product_from_db(1)
     product_id = rand_product[0]['ID']
