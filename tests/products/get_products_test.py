@@ -30,5 +30,5 @@ def test_get_product_by_id():
     assert product_db_name == api_name, f"Get product by id returned wrong product. Product id: {rand_product_id}, " \
                                 f"Db name: {product_db_name}, Api name: {api_name}"
 
-    assert product_status == api_post_status, f"Returned product has wrong status. Product id: {rand_product_id}" \
+    assert product_status == api_post_status, f"Returned product has a wrong status. Product id: {rand_product_id}" \
                                 f"Db status: {product_status}, Api status: {api_post_status}"
