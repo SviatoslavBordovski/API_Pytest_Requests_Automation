@@ -10,7 +10,6 @@ def orders_setup():
     product_dao = ProductsDAO()
     rand_product = product_dao.get_random_product_from_db(1)
     product_id = rand_product[0]['ID']
-
     order_helper = OrdersHelper()
 
     info = {'product_id': product_id,
