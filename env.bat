@@ -1,4 +1,4 @@
-:: Powershell Windows10 CLI command to apply all env variables
+:: Powershell Windows10 CLI command to apply all environment variables
 :: call env.bat
 
 :: Environment
