@@ -7,14 +7,14 @@ import pytest
 @pytest.mark.tc6
 def test_create_1_simple_product():
 
-    # generate dictionary and some data for it
+    # Generate dictionary and some data for it
     request_body = dict()
     request_body['name'] = generate_random_string(10, prefix="automation_test_name_")
     request_body['type'] = "simple"
     request_body['regular_price'] = "10.99"
     request_body['description'] = generate_random_string(30, suffix="_quite_good_described_field")
 
-    # make an api call
+    # Make an api call
     product_rs = ProductsHelper().call_create_product(request_body)
 
     # verify the response is not empty and actual result matches expected
