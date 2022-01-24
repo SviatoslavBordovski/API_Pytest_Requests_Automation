@@ -31,7 +31,7 @@ class TestListProductsWithFilter(object):
 
         logger.info("Fetched list of products matches actual list recorded in the db")
 
-        # Verify a number of ids in the received list is matching the db list and list is not empty
+        # Verify a number of ids in the received list is matching the db list and such list is not empty
         ids_in_api = [i['id'] for i in rs_with_all_fetched_products]
         ids_in_db = [i['ID'] for i in db_products]
         ids_diff = list(set(ids_in_api) - set(ids_in_db))
