@@ -10,7 +10,7 @@ class TestListProductsWithFilter(object):
     @pytest.mark.tc7
     def test_list_products_with_filter_after(self):
         
-        logger.info("Test Case #7: Getting all products created after specific date.")
+        logger.info("Test Case #7: Getting all products created after some specific date.")
 
         # Create data (date in the past should be changed to .iso format)
         x_days_from_today = 150
