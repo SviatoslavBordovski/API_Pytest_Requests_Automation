@@ -14,4 +14,4 @@ set DB_USER=your_user
 set DB_PASSWORD=your_password
 
 :: Required to resolve 'module not found' issues during tests execution
-set PYTHONPATH=%{PYTHONPATH}%;C:\Users\sbord_iu0ld13\PycharmProjects\ApiPytestRequests\tests_suite
+set PYTHONPATH=%{PYTHONPATH}%;C:\Users\<path_to_project_folder>
