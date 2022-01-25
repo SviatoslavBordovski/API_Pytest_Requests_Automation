@@ -1,5 +1,5 @@
 :: Powershell Windows 10 CLI commands list to apply all environment variables
-:: call env.bat
+:: All variables are applied with 'call env.bat' command
 
 :: Environment
 set MACHINE=machine1
