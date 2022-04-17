@@ -32,3 +32,4 @@ def test_get_product_by_id():
 
     assert product_status == api_post_status, f"Returned product has a wrong status. Actual Product id: {rand_product_id}" \
                                 f"Db status: {product_status}, Api status: {api_post_status}"
+ 
