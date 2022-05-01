@@ -22,7 +22,7 @@ def orders_setup():
 @pytest.mark.tc8
 def test_create_order_guest_user(my_orders_smoke_setup):
 
-    logger.info("Test Case #8: Create a new paid order by the guest user.")
+    logger.info("Test Case #8: Create a new paid order by guest user.")
 
     # prepare test data
     order_helper = orders_setup['order_helper']
