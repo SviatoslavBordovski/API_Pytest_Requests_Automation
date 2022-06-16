@@ -14,7 +14,7 @@ def test_get_all_products():
 @pytest.mark.tc5
 def test_get_product_by_id():
 
-    # Get product data (id, name and status) from the database
+    # Get product data (id, name and status) from the db
     rand_product = ProductsDAO().get_random_product_from_db(1)
     rand_product_id = rand_product[0]['ID']
     product_db_name = rand_product[0]['post_title']
