@@ -38,7 +38,6 @@ def test_create_order_guest_user(orders_setup):
               ]}
     order_json = order_helper.create_order(additional_args=info)
 
-    import pdb; pdb.set_trace()
     # verify response
     expected_product = [{'product_id': product_id}]
     order_helper.verify_order_is_created(order_json, customer_id, expected_product)
@@ -46,6 +45,7 @@ def test_create_order_guest_user(orders_setup):
 @pytest.mark.orders
 @pytest.mark.tc9
 def test_create_paid_order_new_created_customer(my_orders_smoke_setup):
+    
     # create helper objects
     order_helper = my_orders_smoke_setup['order_helper']
     customer_helper = CustomerHelper()
