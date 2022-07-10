@@ -13,5 +13,5 @@ set WC_SECRET=your_secret
 set DB_USER=your_user
 set DB_PASSWORD=your_password
 
-:: Required to resolve 'module not found' issues during tests execution
+:: Required to resolve 'module not found' issues during tests run execution
 set PYTHONPATH=%{PYTHONPATH}%;C:\Users\<path_to_project_folder>
