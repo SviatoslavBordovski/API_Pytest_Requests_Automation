@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-setup(name='ApiPytestAutomation',
+setup(name='API_Pytest_Automation',
       version='1.0',
       description="API Pytest automation framework solution",
       author='Sviatoslav Bordovski',
