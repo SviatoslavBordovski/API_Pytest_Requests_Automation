@@ -43,7 +43,7 @@ class OrdersHelper(object):
                                                                    f"found '{len(order_json['line_items'])}'" \
                                                                    f"Order id: {order_json['id']}."
 
-        # verify db
+        # verify record exists in the db
         order_id = order_json['id']
         line_info = orders_dao.get_order_lines_by_order_id(order_id)
         assert line_info, f"Create order, line item not found in DB. Order id: {order_id}"
