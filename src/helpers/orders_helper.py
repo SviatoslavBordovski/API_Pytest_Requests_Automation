@@ -40,7 +40,7 @@ class OrdersHelper(object):
                                                          f"'{order_json['customer_id']}'"
 
         assert len(order_json['line_items']) == len(exp_products), f"Expected only {len(exp_products)} item in order but " \
-                                                                   f"found '{len(order_json['line_items'])}'" \
+                                                                   f"found '{len(order_json['line_items'])}', " \
                                                                    f"Order id: {order_json['id']}."
 
         # verify record exists in the db
