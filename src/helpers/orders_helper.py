@@ -53,7 +53,7 @@ class OrdersHelper(object):
         # import pdb; pdb.set_trace()
         assert len(line_items) == 1, f"Expected 1 line item but found {len(line_items)}. Order id: {order_id}"
 
-        # get list of product ids in the response
+        # get list of product ids in api response
         api_product_ids = [i['product_id'] for i in order_json['line_items']]
 
         for product in exp_products:
