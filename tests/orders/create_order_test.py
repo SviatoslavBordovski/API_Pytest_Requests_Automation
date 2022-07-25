@@ -8,7 +8,7 @@ import pytest
 def orders_setup():
     product_dao = ProductsDAO()
     order_helper = OrdersHelper()
-    
+
     rand_product = product_dao.get_random_product_from_db(1)
     product_id = rand_product[0]['ID']
 
@@ -44,16 +44,16 @@ def test_create_order_guest_user(orders_setup):
 
 @pytest.mark.orders
 @pytest.mark.tc9
-def test_create_paid_order_new_created_customer(my_orders_smoke_setup):
-    
+def test_create_paid_order_new_created_customer(orders_setup):
+
     # create helper objects
-    order_helper = my_orders_smoke_setup['order_helper']
+    order_helper = orders_setup['order_helper']
     customer_helper = CustomerHelper()
 
     # make the call
-    cust_info = customer_helper.create_customer()
-    customer_id = cust_info['id']
-    product_id = my_orders_smoke_setup['product_id']
+    new_customer = customer_helper.create_customer()
+    customer_id = new_customer['id']
+    product_id = orders_setup['product_id']
 
     info = {"line_items": [
                 {
@@ -61,7 +61,7 @@ def test_create_paid_order_new_created_customer(my_orders_smoke_setup):
                   "quantity": 1
                 }
               ],
-    "customer_id": customer_id
+        "customer_id": customer_id
     }
 
     order_json = order_helper.create_order(additional_args=info)
