@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(name='API_Pytest_Automation',
       version='1.0',
-      description="API Pytest automation framework solution",
+      description="API Pytest automation framework",
       author='Sviatoslav Bordovski',
       author_email='sbordovski@gmail.com',
       packages=find_packages(),
