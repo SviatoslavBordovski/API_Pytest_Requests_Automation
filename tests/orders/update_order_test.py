@@ -33,7 +33,7 @@ def test_update_order_status(new_status):
                                                    f"but order is still '{new_order_info['status']}'"
 
 
-@pytest.mark.tcid58
+@pytest.mark.tc13
 def test_update_order_status_to_random_string():
 
     new_status = 'abcdefg'
@@ -54,7 +54,7 @@ def test_update_order_status_to_random_string():
      f"string did not have correct messge in response. " \
      f"Expected: 'rest_invalid_param' Actual: {rs_api['message']}"
 
-@pytest.mark.tc13
+@pytest.mark.tc14
 def test_update_order_customer_note():
 
     order_helper = OrdersHelper()
