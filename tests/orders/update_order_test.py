@@ -29,7 +29,7 @@ def test_update_order_status(new_status):
     new_order_info = order_helper.call_get_an_order(order_id)
 
     # verify new actual order status equals expected updated status
-    assert new_order_info['status'] == new_status, f"Updated order status to '{new_status}'," \
+    assert new_order_info['status'] == new_status, f"Updated order status to '{new_status}', " \
                                                    f"but order is still '{new_order_info['status']}'"
 
 
