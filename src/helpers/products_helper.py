@@ -26,7 +26,7 @@ class ProductsHelper(object):
             if not 'per_page' in body.keys():
                 body['per_page'] = 100
 
-            # add a current page number to the api call
+            # add the current page number to the call
             body['page'] = i
             actual_products = self.requests_utility.get('products', body_params=body)
 
@@ -44,4 +44,4 @@ class ProductsHelper(object):
         return self.requests_utility.get(f'products/{product_id}')
 
     def call_update_product(self, product_id, payload=None):
-        return self.requests_utility.put(f'products/{product_id}', payload=payload)
+        return self.requests_utility.put(f'products/{product_id}', payload)
