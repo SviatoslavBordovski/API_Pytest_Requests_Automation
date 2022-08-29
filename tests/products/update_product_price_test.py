@@ -28,7 +28,7 @@ def test_update_regular_price_should_updated_price():
             break
 
     else:
-        # take a random product and make it not on sale by setting {sale_price=''}
+        # take a random product and make it not on sale by setting {'sale_price': ''}
         test_product = random.choice(products_basket)
         product_id = test_product['ID']
         product_helper.call_update_product(product_id, {'sale_price': ''})
