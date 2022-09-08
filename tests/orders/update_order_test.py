@@ -13,7 +13,7 @@ pytestmark = [pytest.mark.orders, pytest.mark.regression]
                          ])
 def test_update_order_status(new_status):
 
-    # create new order
+    # create a new order
     order_helper = OrdersHelper()
     order_json = order_helper.create_order()
     cur_status = order_json['status']
