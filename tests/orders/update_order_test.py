@@ -32,7 +32,6 @@ def test_update_order_status(new_status):
     assert new_order_info['status'] == new_status, f"Updated order status to '{new_status}', " \
                                                    f"but order is still '{new_order_info['status']}'"
 
-
 @pytest.mark.tc13
 def test_update_order_status_to_random_string():
 
