@@ -47,7 +47,7 @@ def test_update_order_status_to_random_string():
     rs_api = WooAPIUtility().put(f'orders/{order_id}', params=payload, expected_status_code=400)
 
     assert rs_api['code'] == 'rest_invalid_param', f"Update order status to random string did not have " \
-         f"correct code in response. Expected: 'rest_invalid_param' Actual: {rs_api['code']}"
+         f"correct code in the response. Expected: 'rest_invalid_param' Actual: {rs_api['code']}"
 
     assert rs_api['message'] == 'Invalid parameter(s): status',  f"Update order status to random " \
      f"string did not have correct messge in response. " \
