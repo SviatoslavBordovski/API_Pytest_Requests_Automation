@@ -20,7 +20,7 @@ def test_update_order_status(new_status):
     assert cur_status != new_status, f"Current status of order is already {new_status}. " \
                                      f"Unable to run test."
 
-    # update the status with the body params
+    # update status with body params
     order_id = order_json['id']
     payload = {"status": new_status}
     order_helper.call_update_an_order(order_id, payload)
