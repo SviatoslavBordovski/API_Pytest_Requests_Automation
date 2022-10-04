@@ -66,5 +66,5 @@ def test_update_order_customer_note():
 
     # get order information
     new_order_info = order_helper.call_get_an_order(order_id)
-    assert new_order_info['customer_note'] == rand_string, f"Update order's 'customer_note' field," \
+    assert new_order_info['customer_note'] == rand_string, f"Update order's 'customer_note' field " \
        f"failed. Expected: {rand_string}, Actual: {new_order_info['customer_note']}"
