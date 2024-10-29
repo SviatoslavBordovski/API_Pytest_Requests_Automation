@@ -51,6 +51,8 @@ def test_create_customer_fail_for_existing_email():
     request_body = {"email": existing_email, "password": "Password1"}
     cust_api_info = req_helper.post(endpoint='customers', body_params=request_body, expected_status_code=400)
 
+    logger.info("Api call with existing user data has been sent")
+
     assert cust_api_info['code'] == 'registration-error-email-exists', f"You are trying " \
         f"with existing email, this is why you are getting 'code' status code error. Expected" \
         f" to see 'registration-error-email-exists' but found '{cust_api_info['code']}' status code."
